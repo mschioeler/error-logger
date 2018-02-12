@@ -14,8 +14,16 @@
  * limitations under the License.
  */
 
+ :root {
+  --green-bg-color: #B0FFB0;
+  --green-color: #00FF00;
+  --red-bg-color: #FFB0B0;
+  --red-color: #FF0000;
+}
+
 * {
   box-sizing: border-box; }
+
 .center {
   text-align: center;
   position: absolute;
@@ -23,6 +31,20 @@
   right: 0;
   bottom: 0;
   left: 0;
+}
+.errorButton {
+  height: 100%;
+  width: 100%;
+  font-size: 500%;
+  font-weight: bold;
+}
+.green-colorScheme {
+  background-color: var(--green-bg-color);
+  color: var(--green-color);
+}
+.red-colorScheme {
+  background-color: var(--red-bg-color);
+  color: var(--red-color);
 }
 
 html, body {
@@ -199,11 +221,6 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
-  .main .errorButton {
-    float: center;
-    font-size: 60px;
-    vertical-align: center
-  }
 
 .dialog-container {
   background: rgba(0, 0, 0, 0.57);
