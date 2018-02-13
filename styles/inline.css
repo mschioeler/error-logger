@@ -32,10 +32,11 @@
   bottom: 0;
   left: 0;
 }
+
 .errorButton {
   height: 100%;
   width: 100%;
-  font-size: 500%;
+  font-size: 11vmin;
   font-weight: bold;
 }
 .green-colorScheme {
