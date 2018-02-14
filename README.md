@@ -1,5 +1,5 @@
 # error-logger
-Repo med kode til `errorlogger.dk`.
+Code for [http://errorlogger.dk]
 ## Live git-setup
 Generate ssh key-pair:
 ```
@@ -16,4 +16,4 @@ The first time you push to the remote, make sure to specify master branch:
 ```
 git push live +master:refs/head/master
 ```
-From then, simply ```git push live``  on branch master will do.
+From then, simply ```git push live```  on branch master will do.
