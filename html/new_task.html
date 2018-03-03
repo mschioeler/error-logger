@@ -1,7 +1,7 @@
 <ons-page id="newTaskPage">
   <ons-toolbar>
-    <div class="left"><ons-back-button>Todos</ons-back-button></div>
-    <div class="center">New Task</div>
+    <div class="left"><ons-back-button>Rapporter</ons-back-button></div>
+    <div class="center">Ny rapport</div>
     <div class="right">
       <ons-if platform="android">
         <ons-toolbar-button component="button/save-task">
@@ -11,26 +11,21 @@
     </div>
   </ons-toolbar>
 
-  <ons-list-title>Add a new task</ons-list-title>
+  <ons-list-title>Tilføj ny rapport</ons-list-title>
   <ons-list>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="title-input" type="text" placeholder="I want to..." float></ons-input>
+        <ons-input id="title-input" type="text" placeholder="Dato" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
       <div class="center">
-        <ons-input id="category-input" type="text" placeholder="Category" float></ons-input>
-      </div>
-    </ons-list-item>
-    <ons-list-item modifier="nodivider">
-      <div class="center">
-        <ons-input id="description-input" type="text" placeholder="Description" float></ons-input>
+        <ons-input id="category-input" type="text" placeholder="Emne" float></ons-input>
       </div>
     </ons-list-item>
   </ons-list>
 
-  <ons-list-title>Other options</ons-list-title>
+  <ons-list-title>Øvrige indstillinger</ons-list-title>
   <ons-list>
     <ons-list-item modifier="nodivider">
       <label class="center" for="inner-highlight-input">
@@ -51,6 +46,6 @@
   </ons-list>
 
   <ons-if platform="ios other">
-    <ons-button modifier="large" component="button/save-task">Add New Task</ons-button>
+    <ons-button modifier="large" component="button/save-task">Tilføj ny rapport</ons-button>
   </ons-if>
 </ons-page>
