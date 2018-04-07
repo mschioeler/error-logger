@@ -1,63 +1,111 @@
 <ons-page id="detailsTaskPage">
   <ons-toolbar>
     <div class="left"><ons-back-button>Back</ons-back-button></div>
-    <div class="center">Task Details</div>
+    <div class="center">Rapport</div>
     <div class="right">
-      <ons-toolbar-button component="button/save-task">
-        <ons-if platform="android">
-          <ons-icon icon="md-save"></ons-icon>
-        </ons-if>
-        <ons-if platform="ios other">
-          Save
-        </ons-if>
-      </ons-toolbar-button>
+
     </div>
   </ons-toolbar>
-
-  <ons-list-title>Modify your task</ons-list-title>
+  <ons-list-title>Information om rapporten</ons-list-title>
   <ons-list>
     <ons-list-item modifier="nodivider">
       <ons-if platform="ios other" class="left left-label">
-        Title
+        Dato
       </ons-if>
       <div class="center">
-        <ons-input id="title-input" type="text" placeholder="I want to..." float></ons-input>
+        <div id="field1-input"></div>
+      </div>
+    </ons-list-item>
+
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Forestilling
+      </ons-if>
+      <div class="center">
+         <div id="field2-input"></div>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
       <ons-if platform="ios other" class="left left-label">
-        Category
+        Operatør
       </ons-if>
       <div class="center">
-        <ons-input id="category-input" type="text" placeholder="Category" float></ons-input>
-      </div>
+         <div id="field3-input"></div>      </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
       <ons-if platform="ios other" class="left left-label">
-        Description
+        Klokkeslet
       </ons-if>
       <div class="center">
-        <ons-input id="description-input" type="text" placeholder="Description" float></ons-input>
+         <div id="field4-input"></div>
       </div>
     </ons-list-item>
   </ons-list>
-
-  <ons-list-title>Other options</ons-list-title>
-  <ons-list>
+      <div id="no-error-banner" class="center-outer green">
+        <div id="center-inner">Ingen Fejl</div>
+      </div>
+      <div id="error-banner" class="red center-outer">
+        <div id="center-inner">Fejl</div>
+      </div>
+  <ons-list-title id="error-title">Information om fejlen</ons-list-title>
+  <ons-list id="error-info">
     <ons-list-item modifier="nodivider">
-      <label class="center" for="inner-highlight-input">
-        Highlight?
-      </label>
-      <div class="right">
-        <ons-switch id="highlight-input" input-id="inner-highlight-input"></ons-switch>
+      <ons-if platform="ios other" class="left left-label">
+        Beskrivelse
+      </ons-if>
+      <div class="center">
+         <div id="field6-input"></div>
       </div>
     </ons-list-item>
-    <ons-list-item modifier="nodivider">
-      <label class="center" for="inner-urgent-input">
-        Is it urgent?
-      </label>
-      <div class="right">
-        <ons-switch id="urgent-input" input-id="inner-urgent-input" disabled></ons-switch>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Fejlmeddelelse
+      </ons-if>
+      <div class="center">
+         <div id="field7-input"></div>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Løsning
+      </ons-if>
+      <div class="center">
+         <div id="field8-input"></div>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Axis
+      </ons-if>
+      <div class="center">
+         <div id="field9-input"></div>
+      </div>
+    </ons-list-item>
+        </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Desk
+      </ons-if>
+      <div class="center">
+         <div id="field10-input"></div>
+      </div>
+    </ons-list-item>
+        </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Server
+      </ons-if>
+      <div class="center">
+         <div id="field11-input"></div>
+      </div>
+    </ons-list-item>
+        </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Anden hardware
+      </ons-if>
+      <div class="center">
+         <div id="field12-input"></div>
       </div>
     </ons-list-item>
   </ons-list>

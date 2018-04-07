@@ -1,3 +1,14 @@
+/**************
+ *** Colors ***
+ **************/
+
+ :root {
+  --green-bg-color: #B0FFB0;
+  --green-color: #00FF00;
+  --red-bg-color: #FFB0B0;
+  --red-color: #FF0000;
+}
+
 /*****************
  *** Custom CSS ***
  *****************/
@@ -5,6 +16,21 @@
 ons-input[type=text] {
   width: 90%;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.green {
+  color: var(--green-color);
+  background-color: var(--green-bg-color);
+}
+
+.red {
+  color: var(--red-color);
+  background-color: var(--red-bg-color);
+}
+
 
 ons-button[modifier=large] {
   width: initial;
@@ -25,7 +51,6 @@ ons-splitter-side[side="left"][animation="overlay"] {
   font-size: 16px;
   color: #666
 }
-
 
 
 /********************
@@ -162,4 +187,11 @@ ons-splitter-side[side="left"][animation="overlay"] {
     opacity: 0.1;
     height: 0;
   }
+}
+
+.center-outer {
+  text-align: center;
+}
+.center-inner {
+  display: inline-block;
 }
