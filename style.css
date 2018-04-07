@@ -167,3 +167,10 @@ ons-splitter-side[side="left"][animation="overlay"] {
     height: 0;
   }
 }
+
+.center-outer {
+  text-align: center;
+}
+.center-inner {
+  display: inline-block;
+}
