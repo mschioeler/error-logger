@@ -27,6 +27,10 @@ ons-splitter-side[side="left"][animation="overlay"] {
 }
 
 
+.error-info {
+  visibility: hidden;
+}
+
 
 /********************
  *** Animation CSS ***

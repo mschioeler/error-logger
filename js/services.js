@@ -15,10 +15,9 @@ myApp.services = {
       var taskItem = ons.createElement(
         '<ons-list-item tappable category="' + myApp.services.categories.parseId(data.category)+ '">' +
           '<label class="left">' +
-           '<ons-checkbox></ons-checkbox>' +
           '</label>' +
           '<div class="center">' +
-            data.title +
+            data.field1 +
           '</div>' +
           '<div class="right">' +
             '<ons-icon style="color: grey; padding-left: 4px" icon="ion-ios-trash-outline, material:md-delete"></ons-icon>' +
@@ -28,14 +27,6 @@ myApp.services = {
 
       // Store data within the element.
       taskItem.data = data;
-
-      // Add 'completion' functionality when the checkbox changes.
-      taskItem.data.onCheckboxChange = function(event) {
-        myApp.services.animators.swipe(taskItem, function() {
-          var listId = (taskItem.parentElement.id === 'pending-list' && event.target.checked) ? '#completed-list' : '#pending-list';
-          document.querySelector(listId).appendChild(taskItem);
-        });
-      };
 
       taskItem.addEventListener('change', taskItem.data.onCheckboxChange);
 
@@ -194,19 +185,6 @@ myApp.services = {
   /////////////////////
   animators: {
 
-    // Swipe animation for task completion.
-    swipe: function(listItem, callback) {
-      var animation = (listItem.parentElement.id === 'pending-list') ? 'animation-swipe-right' : 'animation-swipe-left';
-      listItem.classList.add('hide-children');
-      listItem.classList.add(animation);
-
-      setTimeout(function() {
-        listItem.classList.remove(animation);
-        listItem.classList.remove('hide-children');
-        callback();
-      }, 950);
-    },
-
     // Remove animation for task deletion.
     remove: function(listItem, callback) {
       listItem.classList.add('animation-remove');
@@ -223,60 +201,25 @@ myApp.services = {
   ////////////////////////
   fixtures: [
     {
-      title: 'Download OnsenUI',
-      category: 'Programming',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
+      field1: 'lørdag, januar 7, 2017',
+      field2: true,
+      field3: 'Arne',
+      field4: 'Klavs Frandsen',
+      field5: 'Ca. 18:05',
+      field6: '4101 st. 9 brake 2.',
+      field7: 'Que blev grå ved aktivering og kørte ikke',
+      field8: 'Gentage que',
+      field9: '',
+      field10: '',
+      field11: '',
+      field12: ''
     },
     {
-      title: 'Install Monaca CLI',
-      category: 'Programming',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Star Onsen UI repo on Github',
-      category: 'Super important',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Register in the community forum',
-      category: 'Super important',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Send donations to Fran and Andreas',
-      category: 'Super important',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Profit',
-      category: '',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Visit Japan',
-      category: 'Travels',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
-    },
-    {
-      title: 'Enjoy an Onsen with Onsen UI team',
-      category: 'Personal',
-      description: 'Some description.',
-      highlight: false,
-      urgent: false
+      field1: '07-04-2018',
+      field2: false,
+      field3: 'Arne',
+      field4: 'Klavs Frandsen',
+      field5: 'Ca. 18:05'
     }
   ]
 };

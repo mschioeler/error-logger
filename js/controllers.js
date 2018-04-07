@@ -9,9 +9,9 @@ myApp.controllers = {
   //////////////////////////
   tabbarPage: function(page) {
     // Set button functionality to open/close the menu.
-    page.querySelector('[component="button/menu"]').onclick = function() {
-      document.querySelector('#mySplitter').left.toggle();
-    };
+    //page.querySelector('[component="button/menu"]').onclick = function() {
+    //  document.querySelector('#mySplitter').left.toggle();
+    //};
 
     // Set button functionality to push 'new_task.html' page.
     Array.prototype.forEach.call(page.querySelectorAll('[component="button/new-task"]'), function(element) {
@@ -51,11 +51,10 @@ myApp.controllers = {
           // If input title is not empty, create a new task.
           myApp.services.tasks.create(
             {
-              title: newTitle,
-              category: page.querySelector('#category-input').value,
-              description: page.querySelector('#description-input').value,
-              highlight: page.querySelector('#highlight-input').checked,
-              urgent: page.querySelector('#urgent-input').checked
+              field1: newTitle,
+              field2: page.querySelector('#urgent-input').checked,
+              field3: page.querySelector('#description-input').value,
+              field4: page.querySelector('#description-input').value
             }
           );
 
@@ -80,48 +79,17 @@ myApp.controllers = {
     var element = page.data.element;
 
     // Fill the view with the stored data.
-    page.querySelector('#title-input').value = element.data.title;
-    page.querySelector('#category-input').value = element.data.category;
-    page.querySelector('#description-input').value = element.data.description;
-    page.querySelector('#highlight-input').checked = element.data.highlight;
-    page.querySelector('#urgent-input').checked = element.data.urgent;
-
-    // Set button functionality to save an existing task.
-    page.querySelector('[component="button/save-task"]').onclick = function() {
-      var newTitle = page.querySelector('#title-input').value;
-
-      if (newTitle) {
-        // If input title is not empty, ask for confirmation before saving.
-        ons.notification.confirm(
-          {
-            title: 'Save changes?',
-            message: 'Previous data will be overwritten.',
-            buttonLabels: ['Discard', 'Save']
-          }
-        ).then(function(buttonIndex) {
-          if (buttonIndex === 1) {
-            // If 'Save' button was pressed, overwrite the task.
-            myApp.services.tasks.update(element,
-              {
-                title: newTitle,
-                category: page.querySelector('#category-input').value,
-                description: page.querySelector('#description-input').value,
-                ugent: element.data.urgent,
-                highlight: page.querySelector('#highlight-input').checked
-              }
-            );
-
-            // Set selected category to 'All', refresh and pop page.
-            document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
-            document.querySelector('#default-category-list ons-list-item').updateCategoryView();
-            document.querySelector('#myNavigator').popPage();
-          }
-        });
-
-      } else {
-        // Show alert if the input title is empty.
-        ons.notification.alert('You must provide a task title.');
-      }
-    };
+    page.querySelector('#field1-input').innerHTML = element.data.field1;
+    page.querySelector('#field2-input').checked = element.data.field2;
+    page.querySelector('#field3-input').innerHTML = element.data.field3;
+    page.querySelector('#field4-input').innerHTML = element.data.field4;
+    page.querySelector('#field5-input').innerHTML = element.data.field5;
+    page.querySelector('#field6-input').innerHTML = element.data.field6;
+    page.querySelector('#field7-input').innerHTML = element.data.field7;
+    page.querySelector('#field8-input').innerHTML = element.data.field8;
+    page.querySelector('#field9-input').innerHTML = element.data.field9;
+    page.querySelector('#field10-input').innerHTML = element.data.field10;
+    page.querySelector('#field11-input').innerHTML = element.data.field11;
+    page.querySelector('#field12-input').innerHTML = element.data.field12;
   }
 };
