@@ -94,7 +94,15 @@ myApp.controllers = {
   detailsTaskPage: function(page) {
     // Get the element passed as argument to pushPage.
     var element = page.data.element;
-
+    var hasError = element.data.field5;
+    // hide irrelevant error banner
+    if (hasError) {
+       page.querySelector('#no-error-banner').setAttribute('hidden');
+    } else {
+       page.querySelector('#error-banner').setAttribute('hidden'); 
+       page.querySelector('#error-title').setAttribute('class', 'hidden');
+       page.querySelector('#error-info').setAttribute('class', 'hidden');
+    }
     // Fill the view with the stored data.
     page.querySelector('#field1-input').innerHTML = element.data.field1;
     page.querySelector('#field2-input').innerHTML = element.data.field2;

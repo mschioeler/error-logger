@@ -17,6 +17,21 @@ ons-input[type=text] {
   width: 90%;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
+.green {
+  color: var(--green-color);
+  background-color: var(--green-bg-color);
+}
+
+.red {
+  color: var(--red-color);
+  background-color: var(--red-bg-color);
+}
+
+
 ons-button[modifier=large] {
   width: initial;
   margin: 10px;
@@ -35,11 +50,6 @@ ons-splitter-side[side="left"][animation="overlay"] {
   width: 30%;
   font-size: 16px;
   color: #666
-}
-
-
-.error-info {
-  visibility: hidden;
 }
 
 
