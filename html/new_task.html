@@ -11,36 +11,106 @@
     </div>
   </ons-toolbar>
 
-  <ons-list-title>Tilføj ny rapport</ons-list-title>
+  <ons-list-title>Information om rapporten</ons-list-title>
   <ons-list>
     <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Dato
+      </ons-if>
       <div class="center">
-        <ons-input id="title-input" type="text" placeholder="Dato" float></ons-input>
+       <ons-input id="field1-input" type="text" placeholder="" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Forestilling
+      </ons-if>
       <div class="center">
-        <ons-input id="category-input" type="text" placeholder="Emne" float></ons-input>
+       <ons-input id="field2-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Operatør
+      </ons-if>
+      <div class="center">
+       <ons-input id="field3-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Klokkeslet
+      </ons-if>
+      <div class="center">
+       <ons-input id="field4-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Fejl
+      </ons-if>
+      <div class="center">
+       <ons-switch id="field5-input" input-id="inner-highlight-input"></ons-switch>
       </div>
     </ons-list-item>
   </ons-list>
 
-  <ons-list-title>Øvrige indstillinger</ons-list-title>
+  <ons-list-title>Information om fejlen</ons-list-title>
   <ons-list>
     <ons-list-item modifier="nodivider">
-      <label class="center" for="inner-highlight-input">
-        Highlight?
-      </label>
-      <div class="right">
-        <ons-switch id="highlight-input" input-id="inner-highlight-input"></ons-switch>
+      <ons-if platform="ios other" class="left left-label">
+        Beskrivelse
+      </ons-if>
+      <div class="center">
+       <ons-input id="field6-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Fejlmeddelelse
+      </ons-if>
+      <div class="center">
+       <ons-input id="field7-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Løsning
+      </ons-if>
+      <div class="center">
+       <ons-input id="field8-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Axis
+      </ons-if>
+      <div class="center">
+       <ons-input id="field9-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Desk
+      </ons-if>
+      <div class="center">
+       <ons-input id="field10-input" type="text" placeholder="" float></ons-input>
+      </div>
+    </ons-list-item>
+        <ons-list-item modifier="nodivider">
+      <ons-if platform="ios other" class="left left-label">
+        Server
+      </ons-if>
+      <div class="center">
+       <ons-input id="field11-input" type="text" placeholder="" float></ons-input>
       </div>
     </ons-list-item>
     <ons-list-item modifier="nodivider">
-      <label class="center" for="inner-urgent-input">
-        Is it urgent?
-      </label>
-      <div class="right">
-        <ons-switch id="urgent-input" input-id="inner-urgent-input"></ons-switch>
+      <ons-if platform="ios other" class="left left-label">
+        Anden hardware
+      </ons-if>
+      <div class="center">
+       <ons-input id="field12-input" type="text" placeholder="" float></ons-input>
       </div>
     </ons-list-item>
   </ons-list>

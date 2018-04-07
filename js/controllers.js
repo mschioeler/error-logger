@@ -45,27 +45,44 @@ myApp.controllers = {
     // Set button functionality to save a new task.
     Array.prototype.forEach.call(page.querySelectorAll('[component="button/save-task"]'), function(element) {
       element.onclick = function() {
-        var newTitle = page.querySelector('#title-input').value;
 
-        if (newTitle) {
-          // If input title is not empty, create a new task.
-          myApp.services.tasks.create(
-            {
-              field1: newTitle,
-              field2: page.querySelector('#urgent-input').checked,
-              field3: page.querySelector('#description-input').value,
-              field4: page.querySelector('#description-input').value
-            }
-          );
+        var f1 = page.querySelector('#field1-input').value;
+        var f2 = page.querySelector('#field2-input').value;
+        var f3 = page.querySelector('#field3-input').value;
+        var f4 = page.querySelector('#field4-input').value;
+        var f5 = page.querySelector('#field5-input').checked;
+        var f6 = page.querySelector('#field6-input').value;
+        var f7 = page.querySelector('#field7-input').value;
 
-          // Set selected category to 'All', refresh and pop page.
-          document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
-          document.querySelector('#default-category-list ons-list-item').updateCategoryView();
-          document.querySelector('#myNavigator').popPage();
-
+        if (f1 && f2 && f3 && f4) {
+          if (!f5 || (f5 && f6 && f7)) {
+            myApp.services.tasks.create(
+              {
+                field1: f1,
+                field2: f2,
+                field3: f3,
+                field4: f4,
+                field5: f5,
+                field6: f6,
+                field7: f7,
+                field8: page.querySelector('#field8-input').value,
+                field9: page.querySelector('#field9-input').value,
+                field10: page.querySelector('#field10-input').value,
+                field11: page.querySelector('#field11-input').value,
+                field12: page.querySelector('#field12-input').value
+              }
+            );
+            // Set selected category to 'All', refresh and pop page.
+            document.querySelector('#default-category-list ons-list-item ons-radio').checked = true;
+            document.querySelector('#default-category-list ons-list-item').updateCategoryView();
+            document.querySelector('#myNavigator').popPage();
+          } else {
+            // Show alert if the input title is empty.
+            ons.notification.alert('Felterne Beskrivelse og Fejlmeddelelse skal udfyldes, hvis fejl.');
+          }
         } else {
           // Show alert if the input title is empty.
-          ons.notification.alert('You must provide a task title.');
+          ons.notification.alert('Felterne Dato, Forestilling, Operatør og Klokkeslet skal udfyldes');
         }
       };
     });
