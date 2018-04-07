@@ -202,10 +202,10 @@ myApp.services = {
   fixtures: [
     {
       field1: 'lørdag, januar 7, 2017',
-      field2: true,
-      field3: 'Arne',
-      field4: 'Klavs Frandsen',
-      field5: 'Ca. 18:05',
+      field2: 'Arne',
+      field3: 'Klavs Frandsen',
+      field4: 'Ca. 18:05',
+      field5: true,
       field6: '4101 st. 9 brake 2.',
       field7: 'Que blev grå ved aktivering og kørte ikke',
       field8: 'Gentage que',
@@ -216,10 +216,10 @@ myApp.services = {
     },
     {
       field1: '07-04-2018',
-      field2: false,
-      field3: 'Arne',
-      field4: 'Klavs Frandsen',
-      field5: 'Ca. 18:05'
+      field2: 'Arne',
+      field3: 'Klavs Frandsen',
+      field4: 'Ca. 18:05',
+      field5: false
     }
   ]
 };

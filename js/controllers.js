@@ -80,10 +80,10 @@ myApp.controllers = {
 
     // Fill the view with the stored data.
     page.querySelector('#field1-input').innerHTML = element.data.field1;
-    page.querySelector('#field2-input').checked = element.data.field2;
+    page.querySelector('#field2-input').innerHTML = element.data.field2;
     page.querySelector('#field3-input').innerHTML = element.data.field3;
     page.querySelector('#field4-input').innerHTML = element.data.field4;
-    page.querySelector('#field5-input').innerHTML = element.data.field5;
+    page.querySelector('#field5-input').checked = element.data.field5;
     page.querySelector('#field6-input').innerHTML = element.data.field6;
     page.querySelector('#field7-input').innerHTML = element.data.field7;
     page.querySelector('#field8-input').innerHTML = element.data.field8;
